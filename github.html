@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DevTech Solutions — Software Development</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  * {margin:0; padding:0; box-sizing:border-box;}
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    background: linear-gradient(-45deg, #1a1a40, #0d7377, #32e0c4, #212121);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  header {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  nav a:hover {text-decoration: underline;}
+
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  section {
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.2);
+    margin: 20px;
+    border-radius: 10px;
+  }
+  h2 {margin-bottom: 10px;}
+
+  form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  input, textarea {
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background: #e64a19;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.3);
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>DevTech Solutions</header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home" class="hero">
+  <h1>We Build Innovative Software</h1>
+  <p>From concept to code, we deliver scalable, reliable, and modern solutions for your business needs.</p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We are a passionate team of developers who love turning ideas into digital reality. Our focus is on clean code, great design, and user-friendly experiences.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <p>Web Development • Mobile Apps • Cloud Solutions • UI/UX Design</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> DevTech Solutions. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you! Your message has been sent.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
